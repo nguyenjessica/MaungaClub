@@ -10,7 +10,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-:root{
+@media (max-width: 768px) {
+  header {
+    padding: 15px 10%;
+  }
+}
+/* For screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }}
+
+:root {
   --text-color: #fff;
   --bg-color: #000;
   --main-color: #ffa343;
@@ -38,6 +49,7 @@ header{
   align-items: center;
   justify-content: space-between;
   transition: all .50s ease;
+  backdrop-filter: blur(3px); /*added blur effect to header while scrolling*/
 
 }
 
@@ -236,11 +248,12 @@ header.sticky {
   border-radius: 5px;
 }
 
+/* Rest of your CSS code */
 
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; /* Align items at the top */
   gap: 2rem;
 }
 
@@ -260,7 +273,836 @@ header.sticky {
 
 .social {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
+  gap: 0.5rem;
 }
 
+.help {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 140px; 
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional styling for the logo if needed */
+.logo {
+  padding: 5px; /* Add some padding around the logo for spacing */
+}
+
+.footer-box, .social-box {
+  margin-top: 35px;
+}
+
+
+
+/*------------image gallery css-----------*/
+
+
+
+
+/*----------------------Booking CSS--------------------*/
+
+.booking-form-page {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+.booking-form-page {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/booking_bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.booking-form input.form-control {
+  border: 1px solid #ced4da;
+  outline: none; /* Add this line to retain the outline */
+  /* Add any other necessary styles here */
+}
+.booking-form-box {
+  max-width: 500px; /* Increase the maximum width */
+  padding: 60px; /* Add more padding */
+  border: 2px solid #ced4da; /* Increase the border size */
+  margin: 10% auto 0;
+  border-radius: 10px; /* Add some border radius for a rounded appearance */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  margin-top: 20px;
+}
+
+.radio-btn{
+  margin: 0 20px;
+
+}
+
+.radio-btn .btn{
+  margin: 20px 10px 20px 0;
+  box-shadow: none;
+}
+
+
+.radio-btn .btn::after
+{
+  content: '';
+  height: 15px;
+  width: 15px;
+  top: -2px;
+  left: -1px;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  border: 3px solid #fff;
+  visibility: visible;
+  border-radius: 50%;
+}
+.radio-btn .btn:checked::after
+{
+    content: '';
+    background-color: #000;
+    transition: 0.5s;
+}
+.radio-btn span
+{
+    color: #fff;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.booking-form
+{
+    padding: 0 20px 20px;
+}
+
+.booking-form label
+{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff !important;
+}
+input::placeholder
+{
+    color: #fff !important;
+}
+.input-grp
+{
+    width: 151px;
+    display: inline-block;
+}
+.form-control
+
+{
+  font-size: 16px!important;
+  border-radius: 8px;
+  color: #fff!important;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none!important;
+  margin-bottom: 15px;
+}
+.select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.select-date::-webkit-calender-picker-indicator
+{
+  background: transparent!important;
+}
+.custom-select
+{
+  color: #fff!important;
+  font-size: 12px!important;
+  border: 1px solid #ced4da!important;
+  box-shadow: none!important;
+  border-radius: 0!important;
+  background: transparent!important;
+}
+.custom-select option
+{
+  color: #333;
+}
+.flight
+{
+  width: 100%;
+  padding: 9px 0;
+  font-size: 12px;
+  border: 1px solid #ced4da!important;
+  background: transparent!important;
+  box-shadow: none!important;
+  border-radius: 0!important;
+}
+.flight:hover
+{
+ background: #fff!important; 
+  color: #000!important;
+  transition: 0.5s;
+}
+
+
+.input-grp .details {
+  padding: 10px 20px; /* Increase the padding */
+  font-size: 16px; /* Increase the font size */
+  background-color: #ffa343;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+
+.details {
+
+  margin-top: 20px; /* Increase margin at the top of the "Submit Details" button */
+}
+
+
+.details:hover {
+  background-color: #e59200;
+}
+
+.booking-header {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #fff; 
+}
+
+.go-back-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/*----------Membership CSS---------*/
+
+.membership-page {
+  background: url('../images/IMG-2345.jpg') center/cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 30px;
+  color: #fff;
+}
+.container{
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contact-box{
+  background:#fff;
+  display: flex;
+}
+
+.contact-left{
+  flex-basis: 60%;
+  padding: 40px 60px;
+
+}
+
+.contact-right{
+  flex-basis: 60%;
+  padding: 40px 60px;
+  background: #1c00b5;
+  color: #fff;
+}
+
+.membership-header{
+  font-size: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+
+}
+.membership-description {
+  text-align: center;
+  margin-bottom: 30px; 
+  color: #fff; /* Change the color to a dark grey blue */
+  font-size: 22px;
+}
+
+.membership-description p {
+  font-size: 18px; 
+  line-height: 1.5;
+}
+
+.container p{
+  margin-bottom: 40px;
+  
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"] {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;}
+
+.membership-page input[type="text"]::placeholder,
+  .membership-page input[type="email"]::placeholder {
+    color: #000;
+    opacity: 1}
+
+    .input-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+.input-row .input-group{
+    flex-basis: 48%;
+
+  }
+.input{
+width: 100%;
+border: none;
+border-bottom: 1px solid #ccc;
+outline: none;
+padding-bottom: 5px;
+
+  }
+
+.textarea{
+  width:100px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+}
+.membership-label{
+  margin-bottom: 6px;
+  display: block;
+  color:#536878
+}
+.membership-button {
+  background: #536878;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the button text */
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.membership-button:hover {
+  background: #536878; /* Darken the background color on hover */
+}
+
+.contact-left h3{
+  color: #536878;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact-right {
+  flex-basis: 60%;
+  padding: 40px 60px;
+  background: #536878; 
+  color: #fff;
+}
+
+.contact-right h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-right p {
+  font-size:18px;
+  line-height: 1.6;
+  margin-bottom:20px;
+
+}
+
+.file-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/*------------------------- Chalets CSS-------------------------- */
+.chalet {
+  background: url('../images/IMG-2345.jpg') center/cover;
+  padding: 70px 0;
+  text-align: center;
+  
+  padding: 70px 0; /* Added padding to the top and bottom */
+  text-align: center;
+}
+.chalet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+  z-index: -1;
+}
+.chalet__header {
+  margin-bottom: 4rem; /* Add some spacing below the header */
+  text-align: center;
+}
+
+.chalet__header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem; 
+  color: var(--main-color);
+}
+.chalet__header p {
+  font-size: 1rem; 
+  color: #fff; /* Set text color */
+}
+.chalet__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.chalet__card {
+  max-width: 320px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; 
+}
+
+.chalet__image {
+  position: relative;
+  height: 200px;
+}
+
+.chalet__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chalet__card__content {
+  padding: 1.5rem;
+}
+
+.chalet__card__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; 
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.chalet__card__content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem; 
+  color: #fff; /* Set text color */
+}
+
+.chalet__btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem; 
+  color: #fff;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chalet__image {
+  position: relative;
+  height: 280px; /* Adjust the height to make images slightly bigger */
+}
+.chalet__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.chalet__card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+}
+
+.chalet__btn:hover {
+  background-color: #e59200; /* Darken the button color on hover */
+}
+.chalet__card:hover .chalet__image img {
+  transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+.button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #e59200; /* Darken the button color on hover */
+}
+
+.chalet__footer {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.chalet__footer p {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.chalet__footer a {
+  color: #ffa343;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.chalet__footer a:hover {
+  color: #e59200;
+}
+/*----------------------pukeko CSS--------------------*/
+.pukeko-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 50px;
+  padding: 60px;
+  background-color: #1a1a1a;
+}
+
+.pukeko-image {
+  position: relative;
+  width: 380px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-left: 150px;
+}
+.pukeko-image:hover {
+  transform: translateY(-5px);
+}
+.pukeko-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.pukeko-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+.pukeko-image:hover .pukeko-image-overlay {
+  opacity: 1;
+}
+
+.pukeko-image-overlay h3 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.pukeko-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+}
+.pukeko-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #1a1a1a;
+}
+
+.pukeko-navbar a {
+  display: inline-block;
+  padding: 15px 50px; /* Adjust padding for button size */
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.pukeko-navbar a:hover {
+  background-color: #ff8b00;
+  color: #fff; /* Keep the text color visible */
+}
+.pukeko-body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #1a1a1a;
+  margin: 0;
+}
+.pukeko-header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.pukeko-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/*----------------------kereru CSS--------------------*/
+
+.kereru-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 50px;
+  padding: 60px;
+  background-color: #1a1a1a;
+}
+
+.kereru-image {
+  position: relative;
+  width: 580px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-left: 150px;
+}
+.kereru-image:hover {
+  transform: translateY(-5px);
+}
+.kereru-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.kereru-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+.kereru-image:hover .kereru-image-overlay {
+  opacity: 1;
+}
+
+.kereru-image-overlay h3 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.kereru-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+}
+.kereru-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+}
+
+
+.kereru-navbar a {
+  display: inline-block;
+  padding: 30px 60px; /* Adjust padding for button size */
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.kereru-navbar a:hover {
+  background-color: #ff8b00;
+  color: #fff; /* Keep the text color visible */
+}
+.kereru-body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #1a1a1a;
+  margin: 0;
+}
+.kereru-header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.kereru-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+/*----------------------kakapo CSS--------------------*/
+.kakapo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 40px;
+  padding: 50px;
+  background-color: #1a1a1a;
+}
+
+.kakapo-image {
+  position: relative;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-left: 150px;
+}
+.kakapo-image:hover {
+  transform: translateY(-5px);
+}
+.kakapo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.kakapo-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+.kakapo-image:hover .kakapo-image-overlay {
+  opacity: 1;
+}
+
+.kakapo-image-overlay h3 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.kakapo-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+}
+.kakapo-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+}
+
+
+.kakapo-navbar a {
+  display: inline-block;
+  padding: 15px 35px; /* Adjust padding for button size */
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.kakapo-navbar a:hover {
+  background-color: #ff8b00;
+  color: #fff; /* Keep the text color visible */
+}
+.kakapo-body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #1a1a1a;
+  margin: 0;
+}
+.kakapo-header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.kakapo-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffa343;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
